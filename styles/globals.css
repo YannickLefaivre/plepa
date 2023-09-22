@@ -1,3 +1,124 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* -- Headings font --  */
+
+/* Bold = font-weight = 700 */
+
+@font-face {
+  font-family: 'philosopher';
+  src: url('/public/fonts/philosopher/web-fonts/Philosopher-Bold-webfont.woff')
+    format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'philosopher';
+  src: url('/public/fonts/philosopher/web-fonts/Philosopher-BoldItalic-webfont.woff')
+    format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Regular = font-weight = 400 */
+
+@font-face {
+  font-family: 'philosopher';
+  src: url('/public/fonts/philosopher/web-fonts/Philosopher-Regular-webfont.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'philosopher';
+  src: url('/public/fonts/philosopher/web-fonts/Philosopher-Italic-webfont.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+/* -- body font --  */
+
+/* Bold = font-weight = 700 */
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish--Bold.ttf') format('TrueType');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish--BoldItalic.ttf') format('TrueType');
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Semi-Bold = font-weight = 600 */
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish-SemiBold.ttf') format('TrueType');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish-SemiBoldItalic.ttf') format('TrueType');
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Medium = font-weight = 500 */
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish-Medium.ttf') format('TrueType');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish-MediumItalic.ttf') format('TrueType');
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Regular = font-weight = 400 */
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish-Regular.ttf') format('TrueType');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish-Italic.ttf') format('TrueType');
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Light = font-weight = 300 */
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish-Light.ttf') format('TrueType');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/public/fonts/mulish/Mulish-LightItalic.ttf') format('TrueType');
+  font-style: italic;
+  font-weight: 300;
+}
