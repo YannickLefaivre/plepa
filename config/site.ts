@@ -1,69 +1,58 @@
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof siteConfig
+
+const primaryMenuItems = [
+  {
+    label: 'Accueil',
+    href: '/',
+  },
+  {
+    label: 'À propos',
+    href: '/about',
+  },
+  {
+    label: 'Articles',
+    href: '/posts',
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+  },
+]
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
-	navItems: [
-		{
-			label: "Home",
-			href: "/",
-		},
+  name: 'PLEPA',
+  description:
+    'blog sur le plan local "Enseigner à Produire Autrement" de l\'EPLEFPA de Croix-Rivail.',
+  navItems: primaryMenuItems,
+  navMenuItems: primaryMenuItems,
+  footerSections: [
     {
-      label: "Docs",
-      href: "/docs",
+      title: 'PLEPA',
+      links: primaryMenuItems,
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      title: 'Juridique',
+      links: [
+        {
+          label: 'Mentions légales',
+          href: '/legal',
+        },
+        {
+          label: 'Confidentialité',
+          href: '/privacy',
+        },
+        {
+          label: 'CGU',
+          href: '/terms',
+        },
+      ],
     },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
-	],
-	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
-		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
-	],
-	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev"
-	},
-};
+  ],
+  links: {
+    github: 'https://github.com/nextui-org/nextui',
+    //   twitter: 'https://twitter.com/getnextui',
+    //   docs: 'https://nextui.org',
+    //   discord: 'https://discord.gg/9b6yyZKmH4',
+    //   sponsor: 'https://patreon.com/jrgarciadev',
+  },
+}

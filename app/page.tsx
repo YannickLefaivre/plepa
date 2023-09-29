@@ -1,54 +1,35 @@
-import NextLink from "next/link";
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { Carousel } from '@/components/organisms/Carousel'
+import Section from '@/components/templates/server/Section'
 
-export default function Home() {
-	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
-				</h2>
-			</div>
+export default function HomePage() {
+  return (
+    <>
+      <Carousel
+        imageSourceList={[
+          '/images/home/9ax45t44m52h4k.webp',
+          '/images/home/9jowjov8i6v4vy.jpg',
+          '/images/home/9vi1jzrh1f413y.webp',
+          '/images/home/25mkjg846vt11d.webp',
+        ]}
+      />
 
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					as={NextLink}
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					as={NextLink}
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
-			</div>
+      <div className="flex-col justify-start items-center gap-4 flex">
+        <h1 className="self-stretch text-center text-neutral-700 text-[58px] font-extrabold font-['Philosopher'] leading-[80px] tracking-tight">
+          Bienvenue
+        </h1>
+        <p className="self-stretch text-center text-neutral-700 font-medium text-2xl font-['Mulish'] leading-loose tracking-tight">
+          Êtes-vous prêt à <span className="text-green-500">produire autrement</span>{' '}
+          ?
+        </p>
+      </div>
 
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
-		</section>
-	);
+      <Section title="Encourager" />
+
+      <Section title="Mobiliser" />
+
+      <Section title="Amplifier" />
+
+      <Section title="Déveloper" />
+    </>
+  )
 }
