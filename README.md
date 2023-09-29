@@ -1,9 +1,14 @@
-# Next.js & NextUI Template
+# PLEPA (blog)
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+Code du blog sur le plan local "Enseigner à Produire Autrement" de l'EPLEFPA de Croix-Rivail.
+
+## Credits
+
+I follow the [course Next.js Blog Website | How to Build a Blog App with Nextjs 13](https://www.youtube.com/watch?v=puIQhnjOfbc) to know how to create a blog with NextJS 13 and Markdown.
 
 ## Technologies Used
 
+- [Next.js & NextUI Template]()
 - [Next.js 13](https://nextjs.org/docs/getting-started)
 - [NextUI v2](https://nextui.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -13,15 +18,6 @@ This is a template for creating applications using Next.js 13 (app directory) an
 - [next-themes](https://github.com/pacocoursey/next-themes)
 
 ## How to Use
-
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
 
 ### Install dependencies
 
