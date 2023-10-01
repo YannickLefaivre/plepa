@@ -1,8 +1,13 @@
 import Header from '@/components/templates/server/Header'
-import CardList from '@/components/organisms/CardList'
+import CardList from '@/components/organisms/server/CardList'
 import { getSortedPostsData } from '@/lib/posts'
 
-export default function PostsPage({ searchParams }) {
+export default function PostsPage({
+  searchParams,
+}: {
+  params: string
+  searchParams: { [key: string]: string }
+}) {
   const posts = getSortedPostsData()
   let filteredPosts = []
 
@@ -27,7 +32,10 @@ export default function PostsPage({ searchParams }) {
     <>
       <Header />
 
-      <CardList posts={filteredPosts} />
+      <section className="w-full flex-col justify-start items-start flex gap-16">
+        <CardList posts={filteredPosts} />
+      </section>
+
       {/* <div className="w-[1046px] left-[2px] top-[1392px] absolute justify-start items-start gap-7 inline-flex">
         <div className="w-[330px] bg-white rounded-sm shadow flex-col justify-start items-center inline-flex">
           <div className="w-[330px] h-[202px] justify-center items-center inline-flex">

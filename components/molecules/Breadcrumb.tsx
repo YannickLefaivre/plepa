@@ -1,5 +1,5 @@
 import React from 'react'
-import { BreadcrumbSeparator } from '../atoms/icons'
+import { BreadcrumbSeparator } from '@/components/atoms/client/icons'
 
 type Props = {
   previousPagesLink: Array<{href: string, label: string}>,
