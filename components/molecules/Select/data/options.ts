@@ -1,7 +1,7 @@
 import { Option, GroupedOption } from './types'
 
 export const axeOneSubCategoryOptions: Option[] = [
-  { value: 'Débât', label: 'Débât', isDisabled: false },
+  { value: 'Débâts', label: 'Débâts', isDisabled: false },
   { value: 'Eco-déléguées', label: 'Eco-déléguées', isDisabled: false },
   { value: 'Projets', label: 'Projets', isDisabled: false },
   { value: 'Examens', label: 'Examens', isDisabled: false },
@@ -30,7 +30,15 @@ export const categoryOptions: Option[] = [
   { label: 'Développer', value: 'Développer', isDisabled: false },
 ]
 
+export const allSubCategories: Option[] = [
+  { label: 'Toutes', value: 'Toutes', isDisabled: false },
+]
+
 export const groupedOptions: GroupedOption[] = [
+  {
+    label: 'Sous-catégorie',
+    options: allSubCategories,
+  },
   {
     label: 'Encourager',
     options: axeOneSubCategoryOptions,

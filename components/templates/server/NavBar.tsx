@@ -1,3 +1,5 @@
+import NextLink from 'next/link'
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -8,49 +10,27 @@ import {
   NavbarMenuItem,
 } from '@nextui-org/navbar'
 // import { Button } from '@nextui-org/button'
-import { Kbd } from '@nextui-org/kbd'
+// import { Kbd } from '@nextui-org/kbd'
 import { Link } from '@nextui-org/link'
-import { Input } from '@nextui-org/input'
 
 import { link as linkStyles } from '@nextui-org/theme'
 
 import { siteConfig } from '@/config/site'
-import NextLink from 'next/link'
 import clsx from 'clsx'
 
 import { ThemeSwitch } from '@/components/atoms/client/theme-switch'
-import {
-  // TwitterIcon,
-  // GithubIcon,
-  // DiscordIcon,
-  // HeartFilledIcon,
-  SearchIcon,
-} from '@/components/atoms/client/icons'
+// import {
+// TwitterIcon,
+// GithubIcon,
+// DiscordIcon,
+// HeartFilledIcon,
+//   SearchIcon,
+// } from '@/components/atoms/client/icons'
 
 import { Logo } from '@/components/atoms/client/icons'
+import SearchForm from '@/components/organisms/client/Form/SearchForm'
 
 export const NavBar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: 'bg-default-100',
-        input: 'text-sm',
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={['ctrl']}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  )
-
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -92,7 +72,9 @@ export const NavBar = () => {
 					</Link> */}
         </NavbarItem>
         <ThemeSwitch />
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        <NavbarItem className="hidden lg:flex">
+          <SearchForm />
+        </NavbarItem>
         {/* <NavbarItem className="hidden md:flex">
 					<Button
             isExternal
@@ -116,7 +98,7 @@ export const NavBar = () => {
       </NavbarContent>
 
       <NavbarMenu>
-        {searchInput}
+        <SearchForm />
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>

@@ -1,5 +1,5 @@
 ---
-title: 'Projet GAMME'
+title: 'Participer au Projet GAMME en Partenariat avec le CIRAD : Une Révolution dans la Gestion de l’Enherbement des Systèmes Maraîchers'
 description: 'Le projet GAMME (Gestion Avancée du Maraîchage et de l’Enherbement), en partenariat avec le CIRAD'
 category: "Amplifier"
 subCategory: "Innovation"
@@ -8,11 +8,6 @@ updateAt: '2023-09-19'
 coverSrc: '/images/posts/concours-de-podcast-2023.webp'
 coverAlt: ''
 ---
-
-# Participer au Projet GAMME en Partenariat avec le CIRAD : Une Révolution dans la Gestion de l’Enherbement des Systèmes Maraîchers
-
-## Introduction
-
 Le projet GAMME (Gestion Avancée du Maraîchage et de l’Enherbement), en partenariat avec le CIRAD (Centre de Coopération Internationale en Recherche Agronomique pour le Développement), est une initiative clé de PLEPA pour révolutionner la gestion de l’enherbement dans les systèmes maraîchers.
 
 ## Qu’est-ce que le Projet GAMME ?
@@ -54,12 +49,3 @@ Le projet vise à développer des méthodes innovantes et durables pour la gesti
 ## Conclusion
 
 Le projet GAMME, en partenariat avec le CIRAD, est une étape cruciale dans la quête de PLEPA pour une agriculture plus durable et efficace. Nous vous invitons à participer à cette initiative révolutionnaire pour transformer les systèmes maraîchers.
-
----
-
-### Mots-clés pour SEO
-
-- Projet GAMME
-- Gestion de l’Enherbement
-- PLEPA et CIRAD
-- Agriculture Durable en Maraîchage

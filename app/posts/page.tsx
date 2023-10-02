@@ -1,39 +1,30 @@
+import { getSortedPostsData } from '@/lib/posts'
+import * as SearchEngine from '@/lib/searchEngine'
 import Header from '@/components/templates/server/Header'
 import CardList from '@/components/organisms/server/CardList'
-import { getSortedPostsData } from '@/lib/posts'
 
 export default function PostsPage({
   searchParams,
 }: {
-  params: string
-  searchParams: { [key: string]: string }
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }) {
   const posts = getSortedPostsData()
-  let filteredPosts = []
+  let filteredPosts = posts
 
-  filteredPosts =
-    searchParams.category !== undefined
-      ? posts.filter((post) => {
-          if (searchParams.category === post.frontMatter.category) {
-            if (searchParams.subCategory === undefined) {
-              return true
-            } else if (searchParams.subCategory === post.frontMatter.subCategory) {
-              return true
-            } else {
-              return false
-            }
-          } else {
-            return false
-          }
-        })
-      : posts
+  if (searchParams.search !== undefined) {
+    filteredPosts = SearchEngine.searchPosts(posts, searchParams.search)
+  }
+  if (searchParams.category !== undefined) {
+    filteredPosts = SearchEngine.searchPostsByCategoryAndSubCategory(posts, searchParams.category, searchParams.subCategory)
+  }
 
   return (
     <>
       <Header />
 
       <section className="w-full flex-col justify-start items-start flex gap-16">
-        <CardList posts={filteredPosts} />
+        {filteredPosts.length !== 0 && <CardList posts={filteredPosts} />}
       </section>
 
       {/* <div className="w-[1046px] left-[2px] top-[1392px] absolute justify-start items-start gap-7 inline-flex">

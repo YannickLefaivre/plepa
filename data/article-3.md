@@ -1,5 +1,5 @@
 ---
-title: 'Les Trois Journées de l’Enseignement Agricole'
+title: 'Les Trois Journées de l’Enseignement Agricole : Une Initiative de PLEPA pour Révolutionner l’Agriculture'
 description: 'Les Trois Journées de l’Enseignement Agricole sont une initiative phare de PLEPA (Plan Local Enseigner à Produire Autrement).'
 category: "Mobiliser"
 subCategory: "Formation"
@@ -8,10 +8,6 @@ updateAt: '2023-09-19'
 coverSrc: '/images/posts/concours-de-podcast-2023.webp'
 coverAlt: ''
 ---
-
-# Les Trois Journées de l’Enseignement Agricole : Une Initiative de PLEPA pour Révolutionner l’Agriculture
-
-## Introduction
 
 Les Trois Journées de l’Enseignement Agricole sont une initiative phare de PLEPA (Plan Local Enseigner à Produire Autrement). Cet événement annuel vise à éduquer, inspirer et mobiliser les acteurs du secteur agricole vers des pratiques plus durables et innovantes.
 

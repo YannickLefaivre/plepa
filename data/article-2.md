@@ -1,5 +1,5 @@
 ---
-title: 'Journée Européenne du Bio'
+title: 'Journée Européenne du Bio : L’Engagement de PLEPA pour une Agriculture Durable'
 description: 'La Journée européenne du Bio est un événement annuel qui met en lumière l’importance de l’agriculture biologique et durable.'
 category: "Encourager"
 subCategory: "Projets"
@@ -8,10 +8,6 @@ updatedAt: '2023-09-19'
 coverSrc: '/images/posts/concours-de-podcast-2023.webp'
 coverAlt: ''
 ---
-
-# Journée Européenne du Bio : L’Engagement de PLEPA pour une Agriculture Durable
-
-## Introduction
 
 La Journée européenne du Bio est un événement annuel qui met en lumière l’importance de l’agriculture biologique et durable. Dans cet article, nous allons explorer comment PLEPA (Plan Local Enseigner à Produire Autrement) s’engage dans cette cause et ce que signifie cette journée pour l’avenir de l’agriculture.
 

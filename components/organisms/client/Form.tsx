@@ -16,7 +16,8 @@ const Form = () => {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const categories = useSelect(categoryOptions)
+  let defaultCategoryIndex = 0
+  let defaultSubCategoryIndex = 0
 
   if (searchParams !== null) {
     groupedOptions.forEach((groupedOption) => {
@@ -26,17 +27,23 @@ const Form = () => {
         groupedOption.options.forEach((option) => (option.isDisabled = true))
       }
     })
-  }
-  const findAssociatedGroupedOption = () => {
-    const AssociatedGroup = groupedOptions.find((group) => {
-      if (group.label === categories.selectedOption?.value) {
-        return true
-      }
-    })
 
-    return AssociatedGroup ? AssociatedGroup?.options : groupedOptions[0].options
+    defaultCategoryIndex = categoryOptions.findIndex(
+      (option) => option.value === searchParams.get('category')
+    )
+    defaultSubCategoryIndex = groupedOptions.findIndex(
+      (group) => group.label === searchParams.get('category')
+    )
+    if (defaultCategoryIndex === -1) {
+      defaultCategoryIndex = 0
+    }
+    if (defaultSubCategoryIndex === -1) {
+      defaultSubCategoryIndex = 0
+    }
   }
-  const subCategories = useSelect(findAssociatedGroupedOption())
+
+  const categories = useSelect(categoryOptions, defaultCategoryIndex)
+  const subCategories = useSelect(groupedOptions[defaultSubCategoryIndex].options)
 
   // Get a new searchParams string by merging the current
   // searchParams with a provided key/value pair
@@ -66,7 +73,9 @@ const Form = () => {
     selectState.setSelectedOption(option)
 
     if (filterType === 'category') {
-      subCategories.setSelectedOption(findAssociatedGroupedOption()[0])
+      subCategories.setSelectedOption(
+        groupedOptions.find((group) => group.label === option.label)?.options[0]
+      )
     }
 
     router.replace(
@@ -94,7 +103,7 @@ const Form = () => {
         />
         <CustomSelect
           inputId="filter-by"
-          defaultValue={findAssociatedGroupedOption()[0]}
+          defaultValue={groupedOptions[0].options[0]}
           value={subCategories.selectedOption}
           handleChange={(value, action) =>
             handleChange(value, action, 'subCategory', subCategories)
